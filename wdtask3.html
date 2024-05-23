@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipes</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Recipes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#breakfast">Breakfast</a></li>
+            <li><a href="#lunch">Lunch</a></li>
+            <li><a href="#dinner">Dinner</a></li>
+            <li><a href="#dessert">Dessert</a></li>
+        </ul>
+        <input type="text" id="searchBar" placeholder="Search recipes...">
+    </nav>
+    <main>
+        <!-- Existing sections -->
+        <section id="breakfast">
+            <h2>Breakfast Recipes</h2>
+            <article class="recipe">
+                <h3>Pancakes</h3>
+                <p>A fluffy and delicious breakfast treat! Pancakes are made with flour, eggs, milk, and sugar. Serve with maple syrup and fresh fruits.</p>
+                <ul>
+                    <li>Blueberry Pancakes</li>
+                    <li>Chocolate Chip Pancakes</li>
+                    <li>Banana Pancakes</li>
+                </ul>
+            </article>
+            <article class="recipe">
+                <h3>Omelette</h3>
+                <p>Simple and customizable omelette recipes. Omelettes are made with eggs, vegetables, cheese, and herbs. Enjoy with toast or salad.</p>
+                <ul>
+                    <li>Vegetable Omelette</li>
+                    <li>Spinach and Feta Omelette</li>
+                    <li>Mushroom and Cheese Omelette</li>
+                </ul>
+            </article>
+        </section>
+        <section id="lunch">
+            <h2>Lunch Recipes</h2>
+            <article class="recipe">
+                <h3>Caesar Salad</h3>
+                <p>A classic salad with Caesar dressing. Made with romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
+                <ul>
+                    <li>Grilled Chicken Caesar Salad</li>
+                    <li>Shrimp Caesar Salad</li>
+                    <li>Veggie Caesar Salad (without meat)</li>
+                </ul>
+            </article>
+            <article class="recipe">
+                <h3>Sandwich</h3>
+                <p>Various sandwich ideas for a quick and tasty lunch. Sandwiches are made with bread, fillings, and condiments.</p>
+                <ul>
+                    <li>Club Sandwich</li>
+                    <li>BLT Sandwich (Bacon, Lettuce, Tomato)</li>
+                    <li>Grilled Cheese Sandwich</li>
+                </ul>
+            </article>
+        </section>
+        <section id="dinner">
+            <h2>Dinner Recipes</h2>
+            <article class="recipe">
+                <h3>Spaghetti Bolognese</h3>
+                <p>A hearty pasta dish with rich tomato sauce, ground beef, and herbs.</p>
+                <ul>
+                    <li>Vegetarian Spaghetti (without meat)</li>
+                    <li>Turkey Bolognese</li>
+                    <li>Chicken Alfredo</li>
+                </ul>
+            </article>
+            <article class="recipe">
+                <h3>Grilled Salmon</h3>
+                <p>Healthy and delicious grilled salmon recipes. Seasoned with herbs and lemon.</p>
+                <ul>
+                    <li>Honey Glazed Salmon</li>
+                    <li>Teriyaki Salmon</li>
+                    <li>Citrus Herb Salmon</li>
+                </ul>
+            </article>
+        </section>
+        <section id="dessert">
+            <h2>Dessert Recipes</h2>
+            <article class="recipe">
+                <h3>Chocolate Cake</h3>
+                <p>Indulgent chocolate cake recipes for any occasion. Rich and moist chocolate cake with chocolate frosting.</p>
+                <ul>
+                    <li>Chocolate Fudge Cake</li>
+                    <li>Chocolate Mousse Cake</li>
+                    <li>Black Forest Cake</li>
+                </ul>
+            </article>
+            <article class="recipe">
+                <h3>Fruit Tart</h3>
+                <p>Colorful and refreshing fruit tart recipes. Made with a buttery tart crust, pastry cream, and fresh fruits.</p>
+                <ul>
+                    <li>Strawberry Tart</li>
+                    <li>Blueberry Tart</li>
+                    <li>Mixed Berry Tart</li>
+                </ul>
+            </article>
+        </section>
+        <section id="submit-recipe">
+            <h2>Submit Your Recipe</h2>
+            <button id="openFormButton">Open Recipe Form</button>
+        </section>
+        
+        <div id="formModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <form id="recipeForm">
+                    <label for="recipeName">Recipe Name:</label>
+                    <input type="text" id="recipeName" name="recipeName" required>
+                    
+                    <label for="recipeType">Recipe Type:</label>
+                    <select id="recipeType" name="recipeType" required>
+                        <option value="">Select a type</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                    
+                    <label for="recipeDetails">Recipe Details:</label>
+                    <textarea id="recipeDetails" name="recipeDetails" required></textarea>
+
+                    <label for="recipeItems">Recipe Items (one per line):</label>
+                    <textarea id="recipeItems" name="recipeItems" required></textarea>
+                    
+                    <button type="submit">Submit Recipe</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Simple Recipes</p>
+    </footer>
+    <script src="task3.js"></script>
+</body>
+</html>
